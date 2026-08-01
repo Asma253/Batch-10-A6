@@ -41,7 +41,7 @@ Breed: ${pet.breed}</p>
 <div class=" flex  opacity-70  ">
     <p class="font-base text-base  ">
         <i class="fa-regular fa-calendar"></i>
-Birth: ${pet.date_of_birth}</p>
+Birth: ${pet.date_of_birth?pet.date_of_birth:"Not Available"}</p>
 </div>
 
 
@@ -63,7 +63,7 @@ Price : ${pet.price}$ </p>
         <i class="fa-regular fa-thumbs-up text-gray-500"></i>
     </button>
 
-    <button class="btn  border-2 text-[#0E7A81] font-bold bg-white"> Adopt</button>
+    <button onclick="congratulation()" class="btn  border-2 text-[#0E7A81] font-bold bg-white"> Adopt</button>
     <button onclick="detailsBtn('${pet.petId}')" class="btn  border-2 text-[#0E7A81] font-bold bg-white"> Details</button>
 
 </div>
@@ -259,5 +259,55 @@ document.getElementById('show-best-friend').scrollIntoView({
 
     behavior:'smooth'
 });
+
+}
+const congratulation = () =>{
+
+    const oldModal = document.querySelector(".adopt-modal")
+
+    if(oldModal){
+        oldModal.remove();
+    }
+    const modal = document.createElement('dialog')
+modal.className=" modal "
+modal.innerHTML=`
+<div class=" my-8 rounded-3xl bg-white space-y-4 ">
+
+
+<div class="flex flex-col justify-center items-center p-8 ">
+
+    <img class=" bg-white"  src="https://img.icons8.com/?size=48&id=kRZicCB1E8B8&format=gif&color=f7f7f7" 
+    alt="" srcset="">
+<h1 class="fon-bold text-4xl "> Congrats!</h1>
+<p class="font-base text-lg ">Adoption Process is Start for your Pet</p>
+<h1   id="countdown" class=" text-6xl " > 1</h1>
+    
+  </div>
+
+
+</div>
+`;
+document.body.appendChild(modal);
+modal.showModal();
+
+let count = 1;
+
+const interval = setInterval(() => {
+
+count++;
+document.getElementById('countdown').innerHTML=count;
+if(count===3){
+    clearInterval( interval);
+
+   setTimeout(() => {
+    modal.close();
+    modal.remove();
+   }, 1000);
+
+}
+    
+}, 1000);
+
+
 
 }
