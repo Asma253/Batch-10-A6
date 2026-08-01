@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B10A6 Assignment</title>
+
+
+    <!-- font lato  link start  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+         <!-- font lato link End  -->
+
+<!-- Daisy Ui CDN start  -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Daisy Ui CDN END  -->
+ <!-- style er connection start -->
+<link rel="stylesheet" href="style.css">
+ <!-- style er connection End  -->
+
+<!-- font awesome start -->
+ <script src="https://kit.fontawesome.com/d843985bf4.js" crossorigin="anonymous"></script>
+ <!-- font awesome END -->
+
+</head>
+<body class="font-lato">
+    
+    <!-- nav start -->
+    <nav >
+        <div class="w-10/12 mx-auto border-2 my-8 ">
+     <div  class=" flex justify-between " >   
+
+<div class=" flex  ">
+    <h1 class="font-bold text-2xl flex items-center gap-2 ">
+         <i  class="fa-solid fa-paw fa-sm" style="color:#0E7A81"> </i>Peddy</h1>
+</div>
+
+<div class="flex gap-5 text-[#131313] opacity-70">
+    <p><a href="">Home</a></p>
+        <p><a href="">Shop</a></p>
+         <p><a href="">Contact</a></p>
+</div>
+
+<div>
+    <div  class="border-2 rounded-full h-10 w-10 flex items-center justify-center  border-gray-400/30 ">
+        <a href=""><i class="fa-regular fa-user text-gray-800 "></i></a>
+    </div>
+</div>
+
+
+</div> 
+        </div>
+    </nav>
+    <!-- nav End -->
+ <main>
+    <!-- adoption path start  -->
+ <section class="container mx-auto w-10/12 lg:my-12 my-8">
+<div>
+    <!-- Description part start  -->
+<div >
+<div class="flex flex-col items-center justify-center border-2 space-y-5">
+
+    <div class="flex gap-2  ">
+         <h2 class="font-bold text-[#131313] opacity-60">Bringing Families Together</h2> 
+
+         <img class="h-5 w-5" src="https://img.icons8.com/?size=48&id=DAcHRPKIfSSq&format=png" alt="" srcset="">
+        </div>
+   
+    <div class="text-center space-y-5">
+        <h1 class=" font-black lg:text-4xl text-3xl  ">Your Path to Adoption <br> Starts Here</h1>
+    <p class="font-base text-sm opacity-90">Starting an adoption journey involves choosing a path, completing training, and undergoing a home <br class="lg:block hidden"> study. The key pathways to explore are foster care adoption.</p>
+</div>
+
+<div>
+    <button class="btn bg-[#0E7A81] text-white rounded-xl">View More</button>
+</div>
+    
+</div>
+
+</div>
+    <!-- Description part End  -->
+<!-- Image part start  -->
+<div>
+    <aside  class="flex justify-center items-center my-5">
+        <img class="border-2 lg:w-[50.14rem] lg:h-[25.3125rem]" src="./images/pet.webp" alt="" srcset="">
+    </aside>
+</div>
+<!-- Image part End  -->
+
+</div>
+ </section>
+    <!-- adoption path End  -->
+
+    <!-- Best friend start  -->
+<section class="container mx-auto w-10/12 lg:my-12 my-8 border-2">
+<div class="border-2">
+<!-- description part start  -->
+<div class="flex flex-col items-center justify-center lg:space-y-5 space-y-3">
+    <h2 class="font-black text-2xl ">Adopt  Your  Best Friend</h2>
+    <p class="font-base  opacity-80 text-sm text-center">Starting an adoption journey involves choosing a path, completing training, and undergoing <br class="lg:block hidden"> a home  study. The key pathways to explore are foster care adoption.</p>
+</div>
+<!-- description part End  -->
+<!-- Button div start  -->
+
+ <div class="   border-2">
+<div class="flex  lg:flex-row flex-col lg:justify-evenly  justify-center items-center my-8 lg:space-y-0 space-y-4 ">
+<!-- dogs  -->
+<div>
+    <button  onclick="LoadCategory ('Dog')" class="btn btn-xl rounded-xl hover:rounded-3xl hover:bg-[#E7F2F2] px-16 bg-[#FFFFFF]  hover:border-blue-300 ">
+<img class="h-8 w-8" src="./images/Dog.png" alt="" srcset="">
+<p class="font-bold text-base">Dogs</p>
+    </button>
+</div>
+<!-- dogs  -->
+
+<!-- cats  -->
+<div>
+    <button onclick="LoadCategory ('Cat')" class="btn btn-xl rounded-xl hover:rounded-3xl hover:bg-[#E7F2F2] px-18 bg-[#FFFFFF]  hover:border-blue-300 ">
+<img class="h-8 w-8" src="./images/Cat.png" alt="" srcset="">
+<p class="font-bold text-base">Cats</p>
+    </button>
+</div>
+<!-- cats  -->
+
+<!-- Rabbits  -->
+<div>
+    <button onclick="LoadCategory ('Rabbit')" class="btn btn-xl rounded-xl hover:rounded-3xl hover:bg-[#E7F2F2] px-14 bg-[#FFFFFF]  hover:border-blue-300 ">
+<img class="h-8 w-8" src="./images/rabbit.png" alt="" srcset="">
+<p class="font-bold text-base">Rabbits</p>
+    </button>
+</div>
+<!-- Rabbits  -->
+
+<!-- Birds -->
+<div>
+    <button  onclick="LoadCategory ('Bird')" class="btn btn-xl rounded-xl hover:rounded-3xl hover:bg-[#E7F2F2] px-16 bg-[#FFFFFF]  hover:border-blue-300 ">
+<img class="h-8 w-8" src="./images/Bird.png" alt="" srcset="">
+<p class="font-bold text-base">Birds</p>
+    </button>
+</div>
+<!-- Birds -->
+</div>
+ </div>
+ <!-- Button div End  -->
+<!-- sort div start  -->
+ <div class="flex border-2 justify-between items-center px-0 lg:px-24">
+
+<div class="border-2 ">
+    <p class="lg:font-black  lg:text-base  font-semibold">Best Deal For you</p>
+</div>
+
+<div class="border-2 flex justify-end">
+    <button id="sort-btn" class="btn px-2 lg:px-5 bg-[#0E7A81] text-white rounded-xl">Sort by Price</button>
+</div>
+
+ </div>
+<!-- sort div End  -->
+
+</div>
+</section>
+        <!-- Best friend End  -->
+<!-- card section start  -->
+<section class="container mx-auto w-10/12 lg:my-12 my-8 ">
+    <div  class="  flex ">
+
+<div  id="all-pet-container" 
+class=" grid lg:grid-cols-3 grid-cols-1 border-red-900 w-3/4 gap-5">
+    <!-- single card demo start  -->
+<!-- <div class="border-2 shadow-2xl border-gray-300 rounded-3xl"> -->
+<!-- card image start -->
+<!-- <div class="m-5 rounded-3xl border-2">
+    <img class="w-36 h-36" src="./images/Bird.png" alt="" srcset="">
+</div> -->
+<!-- card image End -->
+<!-- card description start  -->
+<!-- <div class="m-5">
+<h1 class="font-bold text-lg ">Mister Tartosh</h1>
+
+
+<div class=" flex  opacity-70  ">
+    <p class="font-base text-base  ">
+        <i class="fa-solid fa-grip "></i>
+Breed: Golder retriever</p>
+</div>
+
+<div class=" flex  opacity-70  ">
+    <p class="font-base text-base  ">
+        <i class="fa-regular fa-calendar"></i>
+Birth: 2024</p>
+</div>
+
+
+<div class=" flex  opacity-70  ">
+    <p class="font-base text-base  ">
+        <i class="fa-solid fa-venus"></i>
+Gender: Female </p>
+</div>
+
+<div class=" flex  opacity-70 border-b border-opacity-70 border-gray-500  ">
+    <p class="font-base text-base  ">
+   <i class="fa-solid fa-dollar-sign"></i>
+Price : 199$ </p>
+</div>
+
+
+<div class=" my-5">
+    <button class="btn  border-2 border-gray-400 bg-white">
+        <i class="fa-regular fa-thumbs-up text-gray-500"></i>
+    </button>
+
+    <button class="btn  border-2 text-[#0E7A81] font-bold bg-white"> Adopt</button>
+    <button class="btn  border-2 text-[#0E7A81] font-bold bg-white"> Details</button>
+
+</div>
+
+</div> -->
+<!-- card description End -->
+
+<!-- </div> -->
+    <!-- single card demo End  -->
+
+</div> 
+<!-- images only start  -->
+<div id="Like-Button-Container" 
+class="border-2 w-1/4 h-96 ml-5 border-gray-500 rounded-3xl grid
+  lg:grid-cols-2 grid-cols-1 lg:gap-2 gap-0 lg:p-5 p-1 overflow-y-auto content-start   "> 
+
+
+
+</div>
+<!-- images only end  -->
+
+    </div>
+
+    <!-- lalal  -->
+</section>
+
+<!-- card section End  -->
+ </main>
+ <!-- footer section start   -->
+<footer class="bg-black h-96 text-white pt-20 ">
+<div class="flex justify-evenly ">
+
+<div class="space-y-5">
+    
+    <div>
+        
+    <h1 class=" flex items-center  text-2xl font-base  gap-2 "><img class="h-5 w-5 object-cover " src="./images/logo.webp" alt="">Peddy</h1>
+</div>
+
+<div class="opacity-80 space-y-2">
+    <p>Location:av.Washington 165,NY CA 54003</p>
+    <p>Phone: +31 85 964 47 25</p>
+    <p>Email: info@yourdomain.com</p>
+    <p>Openings hours: 9.00 AM - 5.00 PM</p>
+
+</div>
+
+<div class="flex ">
+    <a href=""><img class="h-10 w-10" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" srcset=""></a>
+
+    <a href=""><img class="h-10 w-10"  src="https://img.icons8.com/?size=48&id=cMRBi0rI3iwb&format=png" alt="" srcset=""></a>
+
+    <a href=""><img class="h-10 w-10"  src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" srcset=""></a>
+
+    <a href=""><img class="h-10 w-10"  src="https://img.icons8.com/?size=48&id=zezJrErrmcwx&format=png" alt="" srcset=""></a>
+
+</div>
+
+</div>
+
+
+<div class="space-y-5">
+    <div>
+        <h2 class="text-lg">Useful Links</h2>
+    </div>
+
+    <div class="flex flex-col opacity-50 space-y-1">
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Animals</a>
+        <a href="">Foundation</a>
+        <a href="">Contact</a>
+    </div>
+</div>
+
+<div class="space-y-5">
+<div class="text-lg">Drop a Message</div>
+
+<div class="flex flex-col space-y-5">
+<input class="rounded-xl bg-[#1F1F1F] p-2 border-none" type="email" placeholder="Enter Your email">   
+     <button class="btn bg-[#0E7A81] text-white text-lg font-base rounded-xl border-none">Subscribe</button>
+
+</div>
+
+</div>
+
+
+
+</div>
+</footer>
+ <!-- footer section End   -->
+
+    <script src="./test.js"></script>
+</body>
+</html>
