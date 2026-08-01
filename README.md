@@ -27,6 +27,8 @@ ES6 Features Used:
 
 Live Link
 
+https://asma253.github.io/Batch-10-A6/
+
 
 
 
