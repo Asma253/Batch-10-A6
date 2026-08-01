@@ -111,28 +111,39 @@ likeButtonContainer.appendChild(img);
  }
 
 const LoadCategory = async(category) =>{
+
+    document.getElementById('spinning').classList.remove('hidden')
+
+    document.getElementById('all-pet-container').classList.add('hidden')
+    document.getElementById('Like-Button-Container').classList.add('hidden')
+
 response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
 data =  await response.json();
 
-if(data.data.length === 0){
 
-document.getElementById('all-pet-container').innerHTML=`
+setTimeout(()=>{
+     document.getElementById('spinning').classList.add('hidden')
 
-<div class=" col-span-3 flex flex-col justify-center items-center space-y-3 
-bg-[#F8F8F8] rounded-3xl">
-    <img src="./images/error.webp" alt="" srcset="">
-    <h1 class="font-bold text-2xl">No Information Available</h1>
-    <p class="font-medium text-xs opacity-60 text-center">It is a long established fact 
-    that a reader will be distracted by the readable content of a page when looking at <br> 
-its layout. The point of using Lorem Ipsum is that it has a.</p>
-</div>
-`;
-return;
-}
+    document.getElementById('all-pet-container').classList.remove('hidden')
+    document.getElementById('Like-Button-Container').classList.remove('hidden')
+
+
+   if (data.data.length === 0) {
+            document.getElementById("all-pet-container").innerHTML = `
+                <div class="col-span-3 flex flex-col justify-center items-center">
+                    <img src="./images/error.webp">
+                    <h1 class="font-bold text-2xl">No Information Available</h1>
+                </div>
+            `;
+            return;
+        }
+
 
 console.log(data)
 displayAllPet(data.data)
 console.log(category)
+},1000);
+
 }
 
 
@@ -241,3 +252,12 @@ displayAllPet(currentPet);
 
 
 
+function ViewMoreBtn () {
+document.getElementById('show-best-friend').classList.remove('hidden')
+
+document.getElementById('show-best-friend').scrollIntoView({
+
+    behavior:'smooth'
+});
+
+}
